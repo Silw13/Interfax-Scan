@@ -1,0 +1,25 @@
+.header__userMenu {
+    display: flex;
+    font-family: Inter;
+}
+
+.button_exit {
+    border: 0;
+    background-color: white;
+    opacity: 0.4;
+    font-family: Inter;
+    padding: 0;
+    font-size: 10px;
+}
+
+.header__userMenu-interface {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 4px;
+}
+
+.header__avatar {
+    height: 32px;
+}
+

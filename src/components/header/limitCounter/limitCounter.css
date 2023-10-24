@@ -1,0 +1,45 @@
+.header__limitCounterText {
+    font-family: Inter;
+    font-size: 10px;
+    opacity: 0.4;
+    margin-bottom: 7px;
+    font-weight: 400;
+}
+
+.header__limitCounter {
+    margin-right: 128px;
+    background-color: #d9d9d967;
+    width: 175px;
+    height: 63px;
+    border-radius: 5px;
+}
+
+.header__limitCounter-wrapper {
+    display: flex;
+    padding: 16px 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header__limitCounterDigits {
+    font-family: Inter;
+    font-weight: 700;
+    color: black;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.header__limitCounter-digitsBlock {
+    margin-top: -8px;
+}
+
+
+.header__limitCounterDigits_green {
+    color: #8AC540
+}
+
+.header__limitCounter-textBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+}

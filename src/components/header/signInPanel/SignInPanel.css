@@ -1,0 +1,30 @@
+.header__signInPanel {
+    display: flex;
+}
+
+.header__vertical-line {
+    position: relative;
+    width: 2px;
+    height: 30px;
+    background-color: #029491;
+    margin: 0px 19px;
+    border: 0;
+}
+
+.button_register {
+    background-color: white;
+    border: 0;
+    font-size: 14px;
+    font-family: inter;
+    opacity: 40%;
+    padding: 0;
+}
+
+.button_signIn {
+    color: #000;
+    border: 0;
+    background-color: #7CE3E1;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: inter;
+}
