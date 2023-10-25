@@ -1,0 +1,27 @@
+.heading_h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.mainPage__mainPicture {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+.mainPage__mainPicture-img img {
+    width: 609px;
+}
+
+.mainPage__mainPicture-text p {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 70px;
+}
+
+.heading_mainPage-h2 {
+    font-size: 45px;
+}
+

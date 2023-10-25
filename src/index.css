@@ -139,6 +139,8 @@ table {
     border-spacing: 0;
 }
 
+/* custom css */
+
 .container {
     max-width: 1320px;
     margin: 0 auto;
@@ -151,4 +153,18 @@ table {
 .button {
     border-radius: 5px;
     cursor: pointer;
+}
+
+.heading {
+    text-transform: uppercase;
+    font-family: Ferry;
+}
+
+.button-standart {
+    background-color: #5970FF;
+    color: white;
+    font-family: Inter;
+    font-size: 22px;
+    padding: 18px 63px;
+    border: 0;
 }
