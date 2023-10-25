@@ -1,6 +1,9 @@
+import SimpleSlider from './Carousel'
+import Slider from './Carousel'
 import './MainPage.css'
 
 export default function MainPage() {
+
     return (
         <div className="mainPage">
             <div className='container'>
@@ -15,9 +18,9 @@ export default function MainPage() {
                     </div>
                 </section>
                 <section className='mainPage__carousel'>
-                        <h2 className='heading heading_mainPage-h2'>Почему именно мы</h2>
-
-                </section>  
+                    <h2 className='heading heading_mainPage-h2'>Почему именно мы</h2>
+                    <SimpleSlider />
+                </section>
             </div>
         </div>
     )

@@ -28,3 +28,28 @@
 .mainPage__carousel .heading_mainPage-h2 {
     margin-bottom: 70px;
 }
+
+.slider-item {
+    height: 230px;
+    margin-bottom: 70px;
+}
+
+.slider-item-wrapper {
+    height: 200px;
+    padding: 30px;
+    margin: 10px 10px;
+    box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+}
+
+.slider-item-txt {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400px;
+    line-height: 22px;
+}
+
+.slider-item-img {
+    margin-bottom: 20px;
+}   
