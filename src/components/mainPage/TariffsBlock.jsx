@@ -7,7 +7,7 @@ const Tariffs = [{
     price: '799',
     oldPrice: '1200',
     includes: ['Безлимитная история запросов', 'Безопасная сделка', 'Поддержка 24/7'],
-    image: ""
+    image: "",
 },
 {
     id: 1,
@@ -30,32 +30,36 @@ const Tariffs = [{
 
 function Tariff() {
     return (
-        <div className='tariffs-blockItem'>
-            <div className='tariffs-blockItem-header tariffs-blockItem-header_orange'>
-                <div className='tariffs-blockItem-wrapper'>
-
-                    <div className='tariffs-blockItem-headerTxt'>
-                        <h3 className='tariffs__heading'>Beginner</h3>
-                        <p className='tariffs__txt'>Для небольшого исследования</p>
+        <div className="tariffs-blockItem">
+            <div className="tariffs-header tariffs-header_orange">
+                <div className="tariffs-header__content">
+                    <div>
+                        <h3 className='tariffs__h3'>Beginner</h3>
+                        <p className='tariffs-header__text'>Для небольшого исследования</p>
                     </div>
-                    <div className='tariffs-blockItem-headerImg'>
+                    <div>
                         <img src="/assets/tariffs/beginner.svg" alt="" />
                     </div>
                 </div>
             </div>
-            <div className='tariffs-blockItem-main'>
-                <div className='tariffs-blockItem-wrapper'>
-                    <h3 className='heading_tariffs-h3'>799 ₽ <span className='heading_tariffs-h3 heading_tariffs-h3_disabled'>1 200 ₽</span></h3>
-                    <p className='tariffs__txt'>или 150 ₽/мес. при рассрочке на 24 мес.</p>
-                    <p>В тариф входит</p>
-                    <ul>
-                        <li>Безлимитная история запросов</li>
-                        <li>Безопасная сделка</li>
-                        <li>Поддержка 24/7</li>
-                    </ul>
-                    <button>Перейти в личный кабинет</button>
+            <div className='tariffs-main'>
+                <div className='tariffs-main__content'>
+                    <div>
+                        <h3 className='tariffs-main__price'>799 ₽<span className='tariffs-main__price tariffs-main__price_disabled'>1200 ₽</span></h3>
+                        <p className='tariffs-main__text'>или 150 ₽/мес. при рассрочке на 24 мес.</p>
+                    </div>
+                    <div>
+                        <p>asdasd</p>
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+                        <button>Перейти в личный кабинет</button>
+                    </div>
                 </div>
             </div>
+
         </div>
     )
 }
@@ -63,8 +67,6 @@ function Tariff() {
 export default function TariffsBlock() {
     return (
         <div className='tariffs-block'>
-            <Tariff />
-            <Tariff />
             <Tariff />
         </div>
     )

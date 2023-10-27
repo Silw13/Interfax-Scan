@@ -66,63 +66,74 @@
 .tariffs-blockItem {
     width: 415px;
     height: 540px;
-    border: solid 1px black;
     border-radius: 10px;
+    margin-bottom: 118px;
     margin-right: 37px;
-    box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
-    -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
-    -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    border: solid 1px black;
 }
 
-
-.tariffs-blockItem-wrapper {
-    padding: 30px 15px 30px 30px;
+.tariffs-blockItem:last-child {
+    margin-right: 0px;
 }
 
-.tariffs-blockItem-header_orange {
+.tariffs-header {
+    border-radius: 10px 10px 0px 0px;
+    height: 132px;
+    margin-bottom: 33px;
+}
+
+.tariffs-header_orange {
     background-color: #FFB64F;
 }
 
-.tariffs-blockItem-header .tariffs-blockItem-wrapper {
+.tariffs-header__content {
+    padding: 30px 0px 0px 30px;
     display: flex;
+
 }
 
-.tariffs__heading {
+.tariffs__h3 {
     font-family: Inter;
+    font-size: 30px;
     font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.tariffs-header__content img {
+    margin-top: -10px;
+}
+
+.tariffs-header__text {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400px;
+}
+
+.tariffs-main__content {
+    padding: 0px 0px 24px 30px;
+    display: flex;
+    flex-direction: column;
+    height: 351px;
+    justify-content: space-between;
+}
+
+.tariffs-main__price {
+    font-family: Inter;
+    font-weight: 500px;
     font-size: 30px;
     color: black;
     margin-bottom: 10px;
 }
 
-.tariffs__txt {
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 18px;
-}
-
-.tariffs-blockItem-headerImg img {
-    margin-top: -20px;
-}
-
-.heading_tariffs-h3 {
-    font-family: Inter;
-    font-weight: 500;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.heading_tariffs-h3_disabled {
+.tariffs-main__price_disabled {
+    opacity: 0.5;
     font-size: 25px;
-    text-decoration: line-through;
-    opacity: 0.4;
     margin-left: 19px;
+    text-decoration: line-through;
 }
 
-.tariffs-block {
-    display: flex;
-}
-
-.tariffs-blockItem:last-child {
-    margin-right: 0;
+.tariffs-main__text {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400px;
 }
