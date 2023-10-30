@@ -69,7 +69,10 @@
     border-radius: 10px;
     margin-bottom: 118px;
     margin-right: 37px;
-    border: solid 1px black;
+    border: solid 2px #FFB64F;
+    box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
 }
 
 .tariffs-blockItem:last-child {
@@ -77,7 +80,7 @@
 }
 
 .tariffs-header {
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
     height: 132px;
     margin-bottom: 33px;
 }
@@ -110,7 +113,7 @@
 }
 
 .tariffs-main__content {
-    padding: 0px 0px 24px 30px;
+    padding: 0px 30px 24px 30px;
     display: flex;
     flex-direction: column;
     height: 351px;
@@ -136,4 +139,54 @@
     font-family: Inter;
     font-size: 18px;
     font-weight: 400px;
+}
+
+.tariffs-main__list-heading {
+    margin-bottom: 10px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tariffs-main__list-item {
+    margin-bottom: 5px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.tariffs-main__list {
+    margin-bottom: 55px;
+}
+
+.tariffs-main__list-item::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("/assets/icons/shevron-icon.svg");
+    background-size: cover;
+    margin-right: 8px;
+}
+
+.tariffs-block {
+    display: flex;
+}
+
+.tariffs-main__button {
+    width: 100%;
+    height: 59px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: #5970FF;
+    cursor: pointer;
+}
+
+.tariffs-main__button-innactive {
+    background-color: #D2D2D2;
+    color: black;
 }

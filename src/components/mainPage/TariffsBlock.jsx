@@ -49,13 +49,13 @@ function Tariff() {
                         <p className='tariffs-main__text'>или 150 ₽/мес. при рассрочке на 24 мес.</p>
                     </div>
                     <div>
-                        <p>asdasd</p>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
+                        <p className='tariffs-main__list-heading'>В тариф входит:</p>
+                        <ul className='tariffs-main__list'>
+                            <li className='tariffs-main__list-item'>Безлимитная история запросов</li>
+                            <li className='tariffs-main__list-item'>Безопасная сделка</li>
+                            <li className='tariffs-main__list-item'>Поддержка 24/7</li>
                         </ul>
-                        <button>Перейти в личный кабинет</button>
+                        <button className='tariffs-main__button tariffs-main__button-innactive'>Перейти в личный кабинет</button>
                     </div>
                 </div>
             </div>
@@ -67,6 +67,8 @@ function Tariff() {
 export default function TariffsBlock() {
     return (
         <div className='tariffs-block'>
+            <Tariff />
+            <Tariff />
             <Tariff />
         </div>
     )
