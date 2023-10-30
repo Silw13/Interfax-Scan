@@ -1,0 +1,27 @@
+.authentificationPage__content {
+    margin-top: 69px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.authentificationPage__heading {
+    text-transform: uppercase;
+    font-family: Ferry;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 900;
+}
+
+.authentificationPage__img img {
+    margin: 14px 0px 0px 112px;
+}
+
+.authentificationPanel {
+    width: 429px;
+    height: 523px;
+    margin-bottom: 80px;
+    box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    margin-right: 65px;
+}
