@@ -25,3 +25,122 @@
     -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
     margin-right: 65px;
 }
+
+.authentificationPanel__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.authentificationPanel__wrapper {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.authentificationPanel__joinWith {
+    display: flex;
+
+}
+
+.authentificationPanel__button-joinWith {
+    background-color: white;
+    border: solid 1px;
+    color: #5970FF82;
+    border-radius: 3px;
+    margin-right: 10px;
+    width: 96px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.authentificationPanel__txt {
+    color: #949494;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.authentificationPanel__inpt {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 43px;
+    border-radius: 5px;
+    border: 1px solid #C7C7C7;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 15px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.authentificationPanel__inpt:last-child {
+    margin-bottom: 30px;
+}
+
+.authentificationPanel__joinButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.authentificationPanel__joinButtons {
+    margin-bottom: 30px;
+}
+
+.authentificationPanel__header-enter {
+    font-family: Inter;
+    color: #029491;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: white;
+    border: 0;
+    border-bottom: solid 2px #029491;
+    padding: 0px 0px 8px 0px;
+    width: 151px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.authentificationPanel__header-register {
+    font-family: Inter;
+    color: #C7C7C7;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: white;
+    border: 0;
+    border-bottom: solid 2px #C7C7C7;
+    padding: 0px 0px 8px 0px;
+    width: 213px;
+    cursor: pointer;
+}
+
+.authentificationPanel__enter-Button {
+    height: 59px;
+    width: 100%;
+    margin-bottom: 15px;
+    color: white;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: #5970FF;
+    border: 0;
+    cursor: pointer;
+}
+
+.authentificationPanel__restorePassword {
+    background-color: white;
+    font-size: 14px;
+    font-family: Inter;
+    font-weight: 400;
+    color: #5970FF;
+    text-decoration: underline;
+    border: 0;
+}
+
+.authentificationPanel__header .lock {
+    position: absolute;
+    margin: -93px 0px 0px -65px;
+}

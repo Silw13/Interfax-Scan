@@ -168,3 +168,7 @@ table {
     padding: 18px 63px;
     border: 0;
 }
+
+button {
+    cursor: pointer;
+}
