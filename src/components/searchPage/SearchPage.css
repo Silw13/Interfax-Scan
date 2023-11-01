@@ -5,3 +5,202 @@
     line-height: 48px;
     margin-bottom: 25px;
 }
+
+.searchPage__content-main-heading-txt {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 47px;
+}
+
+.searchPage__content-main-panel {
+    width: 872px;
+    height: 543px;
+    box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 64px;
+    border-radius: 10px;
+}
+
+.searchPage__content {
+    display: flex;
+}
+
+.searchPage__content-img {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 70px;
+    margin-left: 80px;
+}
+
+.searchPage__content-img-list {
+    position: absolute;
+    margin-bottom: 510px;
+}
+
+.searchPage__content-img-folders {
+    position: absolute;
+    margin-bottom: 510px;
+    margin-left: 233px;
+}
+
+.searchPage__content-main-panel-wrapper {
+    padding: 29px 39px 0px 44px;
+}
+
+.searchPage__content-main-panel-txt {
+    margin-bottom: 20px;
+    font-family: Inter;
+    font-size: 18px;
+}
+
+.searchPage__input {
+    margin-bottom: 30px;
+    border-radius: 5px;
+    width: 242px;
+    height: 43px;
+    border: 1px solid #C7C7C7;
+    font-family: Inter;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.searchPage__select {
+    margin-bottom: 30px;
+    border-radius: 5px;
+    width: 247px;
+    height: 43px;
+    border: 1px solid #C7C7C7;
+    font-family: Inter;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='grey' height='30px' viewBox='0 0 24 24' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #dfdfdf;
+    cursor: pointer;
+
+}
+
+.searchPage__content-main-panel-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.searchPage__content-main-panel-row {
+    display: flex;
+}
+
+.searchPage__content-main-panel-row .searchPage__select {
+    width: 176px;
+    margin-right: 20px;
+}
+
+.searchPage__content-main-panel-wrapper {
+    display: flex;
+}
+
+.searchPage__checkbox {
+    margin-bottom: 15px;
+    margin-right: 17px;
+}
+
+.checkbox-other {
+    display: block;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.checkbox-other input[type=checkbox] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-other span {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 35px;
+    line-height: 22px;
+}
+
+.checkbox-other span:before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("/assets/checkbox-1.png") 0 0 no-repeat;
+}
+
+/* Checked */
+.checkbox-other input[type=checkbox]:checked+span:before {
+    background-image: url("/assets/checkbox-2.png");
+}
+
+/* Focus */
+.focused span:before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+/* Hover */
+.checkbox-other span:hover:before {
+    filter: brightness(110%);
+}
+
+/* Active */
+.checkbox-other span:active:before {
+    filter: brightness(80%);
+}
+
+/* Disabled */
+.checkbox-other input[type=checkbox]:disabled+span {
+    color: #666;
+    cursor: default;
+}
+
+.checkbox-other input[type=checkbox]:disabled+span:before {
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+
+.searchPage__searchPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.searchPage__button {
+    width: 305px;
+    height: 59px;
+    background-color: #5970FF;
+    color: white;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 500;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.searchPage__searchPanel-txt {
+    font-family: Inter;
+    font-size: 14px;
+    color: #949494;
+}

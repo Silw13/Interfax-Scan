@@ -10,7 +10,6 @@ export default function Footer() {
                         <p>г. Москва, Цветной б-р, 40</p>
                         <p>+7 495 771 21 11</p>
                         <p>info@skan.ru</p>
-
                         <p className='footer__copyright'>Copyright. 2022</p>
                     </div>
                 </div>
