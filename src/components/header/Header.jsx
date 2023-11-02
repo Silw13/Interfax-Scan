@@ -6,8 +6,6 @@ import UserMenu from './userMenu/UserMenu'
 import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
 
-
-
 export default function Header() {
     const { isAuthenticated } = useContext(AuthContext);
     return (
@@ -18,8 +16,8 @@ export default function Header() {
                     <nav className='header__nav'>
                         <ul className='header__nav-list'>
                             <li className='header__nav-list-item'><a href=""><Link to="/">Главная</Link></a></li>
-                            <li className='header__nav-list-item'><a href="">Тарифы</a></li>
-                            <li className='header__nav-list-item'><a href="">FAQ</a></li>
+                            <li className='header__nav-list-item'><a>Тарифы</a></li>
+                            <li className='header__nav-list-item'><a>FAQ</a></li>
                         </ul>
                     </nav>
                     {isAuthenticated ? <div className='header__authorizedMenu'><LimitCounter /><UserMenu /></div> : <SignInPanel />}
