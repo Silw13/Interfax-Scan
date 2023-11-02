@@ -4,6 +4,7 @@ import MainPage from './components/mainPage/mainPage.jsx'
 import Footer from './components/footer/Footer.jsx'
 import AuthentificationPage from './components/authenticationPage/AuthentificationPage.jsx'
 import SearchPage from './components/searchPage/SearchPage.jsx'
+import ResultsPage from './components/resultsPage/ResultsPage.jsx'
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
       <Header />
       {/* <MainPage /> */}
       {/* <AuthentificationPage /> */}
-      <SearchPage />
+      {/* <SearchPage /> */}
+      <ResultsPage />
       <Footer />
     </>
   )

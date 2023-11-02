@@ -1,0 +1,67 @@
+.resultsPage__heading-h1 {
+    font-family: Ferry;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 48px;
+    margin-bottom: 36px;
+}
+
+.resultsPage__heading-txt {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.resultsPage__heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultsPage__histogram-h2 {
+    font-family: Ferry;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.resultsPage__histogram-txt {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    color: #949494;
+    margin-bottom: 27px;
+}
+
+.resultsPage__documentsList-h2 {
+    font-family: Ferry;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.resultsPage__button {
+    width: 305px;
+    height: 59px;
+    color: white;
+    background-color: #5970FF;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 109px;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.resultsPage__center {
+    display: flex;
+    justify-content: center;
+}
+
+.resultsPage__documentsList-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
