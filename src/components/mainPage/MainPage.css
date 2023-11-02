@@ -190,3 +190,8 @@
     background-color: #D2D2D2;
     color: black;
 }
+
+.button-standart-link {
+    color: white;
+    text-decoration: none;
+}

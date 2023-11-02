@@ -4,6 +4,8 @@ import LimitCounter from './limitCounter/limitCounter'
 import SignInPanel from './signInPanel/SignInPanel'
 import UserMenu from './userMenu/UserMenu'
 import React, { useContext } from "react";
+import { Link } from 'react-router-dom';
+
 
 
 export default function Header() {
@@ -15,7 +17,7 @@ export default function Header() {
                     <img src='/assets/logo.svg' alt="Logo" className='header__logo' />
                     <nav className='header__nav'>
                         <ul className='header__nav-list'>
-                            <li className='header__nav-list-item'><a href="">Главная</a></li>
+                            <li className='header__nav-list-item'><a href=""><Link to="/">Главная</Link></a></li>
                             <li className='header__nav-list-item'><a href="">Тарифы</a></li>
                             <li className='header__nav-list-item'><a href="">FAQ</a></li>
                         </ul>
