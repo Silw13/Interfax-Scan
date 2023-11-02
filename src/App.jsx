@@ -5,17 +5,17 @@ import Footer from './components/footer/Footer.jsx'
 import AuthentificationPage from './components/authenticationPage/AuthentificationPage.jsx'
 import SearchPage from './components/searchPage/SearchPage.jsx'
 import ResultsPage from './components/resultsPage/ResultsPage.jsx'
+import {AuthProvider} from './hooks/AuthContext.jsx'
 
 function App() {
 
   return (
     <>
-      <Header />
-      {/* <MainPage /> */}
-      {/* <AuthentificationPage /> */}
-      {/* <SearchPage /> */}
-      <ResultsPage />
-      <Footer />
+      <AuthProvider>
+        <Header />
+        <MainPage />
+        <Footer />
+      </AuthProvider>
     </>
   )
 }

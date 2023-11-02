@@ -1,9 +1,13 @@
+import { AuthContext } from '../../hooks/AuthContext';
 import './Header.css'
 import LimitCounter from './limitCounter/limitCounter'
 import SignInPanel from './signInPanel/SignInPanel'
 import UserMenu from './userMenu/UserMenu'
+import React, { useContext } from "react";
+
 
 export default function Header() {
+    const { isAuthenticated } = useContext(AuthContext);
     return (
         <header className="header">
             <div className="container">
@@ -16,11 +20,7 @@ export default function Header() {
                             <li className='header__nav-list-item'><a href="">FAQ</a></li>
                         </ul>
                     </nav>
-                    <SignInPanel />
-                    {/* <div className='header__authorizedMenu'>
-                        <LimitCounter />
-                        <UserMenu />
-                    </div> */}
+                    {isAuthenticated ? <div className='header__authorizedMenu'><LimitCounter /><UserMenu /></div> : <SignInPanel />}
                 </div>
             </div>
         </header>
