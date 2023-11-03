@@ -130,6 +130,12 @@
     cursor: pointer;
 }
 
+.authentificationPanel__enter-Button:disabled {
+    background-color: #596fff88;
+    cursor: not-allowed
+
+}
+
 .authentificationPanel__restorePassword {
     background-color: white;
     font-size: 14px;

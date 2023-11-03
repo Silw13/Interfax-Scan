@@ -12,7 +12,7 @@ export default function Header() {
         <header className="header">
             <div className="container">
                 <div className="header__content">
-                    <img src='/assets/logo.svg' alt="Logo" className='header__logo' />
+                <Link to="/"><img src='/assets/logo.svg' alt="Logo" className='header__logo' /></Link>
                     <nav className='header__nav'>
                         <ul className='header__nav-list'>
                             <li className='header__nav-list-item'><a href=""><Link to="/">Главная</Link></a></li>
