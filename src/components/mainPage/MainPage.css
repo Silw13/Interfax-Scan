@@ -89,12 +89,17 @@
     background-color: #FFB64F;
 }
 
+.tariffs-header_turquoise img {
+    margin-top: -37px;
+}
+
 .tariffs-header_turquoise {
     background-color: #7CE3E1;
 }
 
 .tariffs-header_black {
     background-color: #000000;
+    color: white;
 }
 
 .tariffs-header__content {

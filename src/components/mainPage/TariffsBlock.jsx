@@ -21,7 +21,7 @@ const Tariffs = [{
     oldPrice: '2600',
     installment: 'или 279 ₽/мес. при рассрочке на 24 мес.',
     includes: ['Все пункты тарифа Beginner', 'Экспорт истории', 'Рекомендации по приоритетам'],
-    image: "",
+    image: "pro.svg",
     active: false,
     color: 'turquoise'
 
@@ -34,12 +34,12 @@ const Tariffs = [{
     oldPrice: '3700',
     installment: '',
     includes: ['Все пункты тарифа Pro', 'Безлимитное количество запросов', 'Приоритетная поддержка'],
-    image: "",
+    image: "business.svg",
     active: false,
     color: 'black'
 }];
 
-function Tariff(props) {
+function Tariff(props) {    
     return (
         <div className="tariffs-blockItem">
             <div className={'tariffs-header tariffs-header_' + props.color}>

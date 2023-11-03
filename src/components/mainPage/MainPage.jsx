@@ -15,7 +15,7 @@ export default function MainPage() {
                     <div className='mainPage__mainPicture-text'>
                         <h1 className='heading heading_h1'>сервис по поиску публикаций<br />о компании<br /> по его ИНН</h1>
                         <p>Комплексный анализ публикаций, получение данных<br /> в формате PDF на электронную почту.</p>
-                        {isAuthenticated ? <button className='button button-standart'><Link className='button-standart-link' to="/search">Запросить данные</Link></button> : ('')}
+                        {isAuthenticated ? <Link className='button-standart-link' to="/search"><button className='button button-standart'>Запросить данные</button></Link> : ('')}
                     </div>
                     <div className='mainPage__mainPicture-img'>
                         <img src="/assets/main_main-picture.png" alt="Главная картинка" />

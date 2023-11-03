@@ -31,4 +31,5 @@
 
 .link {
     color: #000;
+    display: flex;
 }
