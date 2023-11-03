@@ -133,7 +133,6 @@
 .authentificationPanel__enter-Button:disabled {
     background-color: #596fff88;
     cursor: not-allowed
-
 }
 
 .authentificationPanel__restorePassword {
@@ -150,3 +149,14 @@
     position: absolute;
     margin: -93px 0px 0px -65px;
 }
+
+.authentificationPanel__txt_small {
+    position: absolute;
+    font-size: 12px;
+    margin-top: -16px;
+    color: #FF5959;
+}
+
+.error {
+    border-color: #FF5959;
+  }

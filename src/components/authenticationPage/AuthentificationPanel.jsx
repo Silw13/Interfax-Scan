@@ -9,15 +9,18 @@ export default function AuthentificationPanel() {
 
     const { isAuthenticated, setIsAuthenticated, setAccessToken } = useContext(AuthContext);
 
+    const [error, setError] = useState('');
     const [input1, setInput1] = useState('');
     const [input2, setInput2] = useState('');
 
     const handleInputChange1 = (event) => {
         setInput1(event.target.value);
+        setError('');
     };
 
     const handleInputChange2 = (event) => {
         setInput2(event.target.value);
+        setError('');
     };
 
     const isButtonDisabled = input1 === '' || input2 === '';
@@ -45,7 +48,7 @@ export default function AuthentificationPanel() {
             setIsAuthenticated(true);
             navigate("/search");
         } else {
-
+            setError('Неправильный логин или пароль');
             console.log(data.error);
         }
     };
@@ -60,9 +63,15 @@ export default function AuthentificationPanel() {
                 </div>
                 <div className='authentificationPanel__inputPanel'>
                     <p className='authentificationPanel__txt'>Логин или номер телефона:</p>
-                    <input className='authentificationPanel__inpt' type="text" value={input1} onChange={handleInputChange1} />
+                    <input className={`authentificationPanel__inpt ${error && 'error'}`} type="text" value={input1} onChange={handleInputChange1} />
+
+                    <p className={`authentificationPanel__txt_small ${error && 'error'}`}>{error}</p>
+
                     <p className='authentificationPanel__txt'>Пароль:</p>
-                    <input className='authentificationPanel__inpt authentificationPanel__inpt_innactive' type="password" value={input2} onChange={handleInputChange2} />
+                    <input className={`authentificationPanel__inpt ${error && 'error'}`} type="password" value={input2} onChange={handleInputChange2} />
+
+                    <p className={`authentificationPanel__txt_small ${error && 'error'}`}>{error}</p>
+
                 </div>
                 <div className='authentificationPanel__joinButtons'>
 
@@ -78,8 +87,6 @@ export default function AuthentificationPanel() {
                         <button className='authentificationPanel__button-joinWith'><img src="/assets/authenticationWays_logo/Yandex_logo.svg" alt="" /></button>
                     </div>
                 </div>
-
-
             </div>
         </div>
     )
