@@ -47,6 +47,7 @@ export default function AuthentificationPanel() {
             setAccessToken(accessToken);
             setIsAuthenticated(true);
             navigate("/search");
+
         } else {
             setError('Неправильный логин или пароль');
             console.log(data.error);
