@@ -1,5 +1,6 @@
-import React from 'react';
 import './MainPage.css';
+import { AuthContext } from '../../hooks/AuthContext';
+import React, { useContext } from "react";
 
 const Tariffs = [{
     id: 0,
@@ -39,9 +40,12 @@ const Tariffs = [{
     color: 'black'
 }];
 
-function Tariff(props) {    
+
+
+function Tariff(props) {
+
     return (
-        <div className="tariffs-blockItem">
+        <div className={`tariffs-blockItem ${props.active ? 'border_' + props.color : ''}`}>
             <div className={'tariffs-header tariffs-header_' + props.color}>
                 <div className="tariffs-header__content">
                     <div>
@@ -55,6 +59,8 @@ function Tariff(props) {
             </div>
             <div className='tariffs-main'>
                 <div className='tariffs-main__content'>
+                    {props.active ? <div className='currectTariff-wrapper'><div className='currectTariff'><span>Текущий тариф</span></div></div> : ""}
+
                     <div>
                         <h3 className='tariffs-main__price'>{props.price + " ₽"}<span className='tariffs-main__price tariffs-main__price_disabled'>{props.oldPrice + " ₽"}</span></h3>
                         <p className='tariffs-main__text'>{props.installment}</p>
@@ -79,6 +85,8 @@ function Tariff(props) {
 }
 
 export default function TariffsBlock() {
+    const { isAuthenticated } = useContext(AuthContext);
+
     return (
         <div className='tariffs-block'>
             {Tariffs.map((tariff) => (
@@ -90,7 +98,7 @@ export default function TariffsBlock() {
                     installment={tariff.installment}
                     includes={tariff.includes}
                     image={tariff.image}
-                    active={tariff.active}
+                    active={isAuthenticated && tariff.id === 0 ? true : false}
                     color={tariff.color} />
             ))}
         </div>

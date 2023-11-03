@@ -69,7 +69,6 @@
     border-radius: 10px;
     margin-bottom: 118px;
     margin-right: 37px;
-    border: solid 2px #FFB64F;
     box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
     -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
@@ -207,4 +206,43 @@
 .button-standart-link {
     color: white;
     text-decoration: none;
+}
+
+.currectTariff {
+    color: white;
+    background-color: #3BA5E0;
+    border-radius: 10px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 6px 14px;
+    width: fit-content;
+}
+
+.currectTariff-wrapper {
+    position: absolute;
+    margin: -20px 0px 0px 235px;
+}
+
+
+.border_orange {
+    border: solid 2px #FFB64F;
+}
+
+
+.border_turquoise {
+    border: solid 2px #FFB64F;
+}
+
+
+.border_black {
+    border: solid 2px #FFB64F;
+}
+
+.tariffs-header_turquoise img {
+    margin: -30px 0px 0 20px;
+}
+
+.tariffs-header_black img {
+    margin: -10px 0px 0 20px;
 }
