@@ -5,10 +5,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useContext } from "react";
+import { useEffect, useState } from 'react';
 
 export default function Histogram() {
     const { requestData } = useContext(RequestContext);
     const { accessToken } = useContext(AuthContext);
+
+    useEffect(() => {
+        console.log(requestData)
+    }, []);
+
     return (
         <div className='resultsPage__histogram'>
             <p className='resultsPage__histogram-txt'>Найдено 4 221 вариантов</p>

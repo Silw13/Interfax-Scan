@@ -107,18 +107,20 @@ export default function SearchPage() {
 
     const handleClick = () => {
         setRequestData({
-            ...requestData, checkbox1Checked: checkbox1Checked,
+            ...requestData,
+            checkbox1Checked: checkbox1Checked,
             checkbox2Checked: checkbox2Checked,
             checkbox3Checked: checkbox3Checked,
             checkbox4Checked: checkbox4Checked,
             checkbox5Checked: checkbox5Checked,
             checkbox6Checked: checkbox6Checked,
-            checkbox7Checked: checkbox7Checked, buttonClicked: true
+            checkbox7Checked: checkbox7Checked,
+            buttonClicked: true,
+
         });
         navigate("/results");
         console.log(requestData);
     };
-
 
     return (
 
@@ -151,13 +153,34 @@ export default function SearchPage() {
                                 </div>
                                 <div className='searchPage__content-main-panel-col'>
                                     <div className='searchPage__content-main-panel-chekboxes'>
-                                        <label className='checkbox-other'><input className='searchPage__checkbox' type="checkbox" checked={checkbox1Checked} onChange={() => setCheckbox1Checked(!checkbox1Checked)} /><span>Признак максимальной полноты</span></label><br />
-                                        <label className='checkbox-other'><input className='searchPage__checkbox' type="checkbox" checked={checkbox2Checked} onChange={() => setCheckbox2Checked(!checkbox2Checked)} /><span>Упоминания в бизнес-контексте</span></label><br />
-                                        <label className='checkbox-other'><input className='searchPage__checkbox' type="checkbox" checked={checkbox3Checked} onChange={() => setCheckbox3Checked(!checkbox3Checked)} /><span>Главная роль в публикации</span></label><br />
-                                        <label className='checkbox-other'><input className='searchPage__checkbox' type="checkbox" checked={checkbox4Checked} onChange={() => setCheckbox4Checked(!checkbox4Checked)} /><span>Публикации только с риск-факторами</span></label><br />
-                                        <label className='checkbox-other'><input className='searchPage__checkbox' type="checkbox" checked={checkbox5Checked} onChange={() => setCheckbox5Checked(!checkbox5Checked)} /><span>Включать технические новости рынков</span></label><br />
-                                        <label className='checkbox-other'><input className='searchPage__checkbox' type="checkbox" checked={checkbox6Checked} onChange={() => setCheckbox6Checked(!checkbox6Checked)} /><span>Включать анонсы и календари</span></label><br />
-                                        <label className='checkbox-other'><input className='searchPage__checkbox' type="checkbox" checked={checkbox7Checked} onChange={() => setCheckbox7Checked(!checkbox7Checked)} /><span>Включать сводки новостей</span></label><br />
+                                        <label className='checkbox-other'>
+                                            <input className='searchPage__checkbox' type="checkbox" checked={checkbox1Checked} onChange={() => setCheckbox1Checked(!checkbox1Checked)} />
+                                            <span>Признак максимальной полноты</span>
+                                        </label><br />
+                                        <label className='checkbox-other'>
+                                            <input className='searchPage__checkbox' type="checkbox" checked={checkbox2Checked} onChange={() => setCheckbox2Checked(!checkbox2Checked)} />
+                                            <span>Упоминания в бизнес-контексте</span>
+                                        </label><br />
+                                        <label className='checkbox-other'>
+                                            <input className='searchPage__checkbox' type="checkbox" checked={checkbox3Checked} onChange={() => setCheckbox3Checked(!checkbox3Checked)} />
+                                            <span>Главная роль в публикации</span>
+                                        </label><br />
+                                        <label className='checkbox-other'>
+                                            <input className='searchPage__checkbox' type="checkbox" checked={checkbox4Checked} onChange={() => setCheckbox4Checked(!checkbox4Checked)} />
+                                            <span>Публикации только с риск-факторами</span>
+                                        </label><br />
+                                        <label className='checkbox-other'>
+                                            <input className='searchPage__checkbox' type="checkbox" checked={checkbox5Checked} onChange={() => setCheckbox5Checked(!checkbox5Checked)} />
+                                            <span>Включать технические новости рынков</span>
+                                        </label><br />
+                                        <label className='checkbox-other'>
+                                            <input className='searchPage__checkbox' type="checkbox" checked={checkbox6Checked} onChange={() => setCheckbox6Checked(!checkbox6Checked)} />
+                                            <span>Включать анонсы и календари</span>
+                                        </label><br />
+                                        <label className='checkbox-other'>
+                                            <input className='searchPage__checkbox' type="checkbox" checked={checkbox7Checked} onChange={() => setCheckbox7Checked(!checkbox7Checked)} />
+                                            <span>Включать сводки новостей</span>
+                                        </label><br />
                                     </div>
                                     <div className='searchPage__searchPanel'>
                                         <button className='searchPage__button' disabled={isButtonDisabled} onClick={handleClick}>Поиск</button>
