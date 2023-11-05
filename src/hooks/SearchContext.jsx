@@ -3,12 +3,11 @@ import React, { createContext, useState } from "react";
 export const RequestContext = createContext();
 
 export const RequestProvider = ({ children }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState();
+    const [requestData, setRequestData] = useState({});
 
-  
     return (
-      <RequestContext.Provider value={{ }}>
-        {children}
-      </RequestContext.Provider>
+        <RequestContext.Provider value={{ requestData, setRequestData }}>
+            {children}
+        </RequestContext.Provider>
     );
-  };
+};

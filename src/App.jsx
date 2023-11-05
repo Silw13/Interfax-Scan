@@ -7,20 +7,23 @@ import SearchPage from './components/searchPage/SearchPage.jsx'
 import ResultsPage from './components/resultsPage/ResultsPage.jsx'
 import { AuthProvider } from './hooks/AuthContext.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { RequestProvider } from './hooks/SearchContext.jsx'
 
 function App() {
 
   return (
     <Router>
       <AuthProvider>
-        <Header />
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/register" element={<AuthentificationPage />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/results" element={<ResultsPage />} />
-        </Routes>
-        <Footer />
+        <RequestProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/register" element={<AuthentificationPage />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/results" element={<ResultsPage />} />
+          </Routes>
+          <Footer />
+        </RequestProvider>
       </AuthProvider>
     </Router>
   )

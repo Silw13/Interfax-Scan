@@ -7,6 +7,8 @@ import React, { useContext } from "react";
 
 export default function AuthentificationPanel() {
 
+    const { accessToken } = useContext(AuthContext);
+
     const { isAuthenticated, setIsAuthenticated, setAccessToken } = useContext(AuthContext);
 
     const [error, setError] = useState('');
