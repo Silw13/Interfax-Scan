@@ -90,7 +90,7 @@
 
 }
 
-.searchPage__content-main-panel-col{
+.searchPage__content-main-panel-col {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -203,4 +203,38 @@
     font-family: Inter;
     font-size: 14px;
     color: #949494;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: opacity(0%);
+}
+
+.searchPage__button:disabled {
+    background-color: #596fff88;
+    cursor: not-allowed
+}
+
+.searchPage__error {
+    position: absolute;
+    font-size: 12px;
+    margin-top: 90px;
+    color: #FF5959;
+}
+
+.searchPage__errorDate {
+    position: absolute;
+    font-size: 12px;
+    margin-top: 51px;
+    color: #FF5959;
+}
+
+.error {
+    border-color: #FF5959;
+    color: #FF5959;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
