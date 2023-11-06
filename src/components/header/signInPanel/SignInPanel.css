@@ -33,3 +33,11 @@
     color: #000;
     display: flex;
 }
+
+
+@media (max-width: 1350px) {
+
+    .header__signInPanel {
+        display: none;
+    }
+}

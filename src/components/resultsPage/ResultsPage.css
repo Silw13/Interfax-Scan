@@ -210,9 +210,38 @@ td p {
 
 .resultsPage__document-content-txt {
     display: -webkit-box;
-    -webkit-line-clamp: 11; /* Указываете желаемое количество строк */
+    -webkit-line-clamp: 11; 
     -webkit-box-orient: vertical;
     overflow: hidden;
-    /* Задайте нужную высоту элемента */
+    
+    
+}
+
+@media (max-width: 1350px) { 
+    .resultsPage__document {
+        width: 335px;
+    }
+    .resultsPage__document-content-img  {
+        width: 270px;
+    }
+
+    .resultsPage__document-footer-button {
+        width: 180px;
+    }
+    .resultsPage__document-footer {
+        justify-content: space-between;
+    }
+
+    .resultsPage__heading-h1 {
+        font-size: 28px;
+        line-height: 33px;
+    }
+
+    .resultsPage__heading {
+        flex-wrap: wrap;
+    }
+    .resultsPage__heading img {
+        width: 335px;
+    }
     
 }

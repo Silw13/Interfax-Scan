@@ -63,3 +63,15 @@
       transform: rotate(360deg);
     }
   } 
+
+
+  @media (max-width: 1350px) {
+
+    .header__limitCounter {
+        margin-right: 0px;
+    }
+
+    .header__limitCounter {
+        width: 135px;
+    }
+}
