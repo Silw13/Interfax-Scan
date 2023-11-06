@@ -1,3 +1,4 @@
+import Documents from './Documets.jsx'
 import './ResultsPage.css'
 import Histogram from './histogram.jsx'
 
@@ -19,11 +20,7 @@ export default function ResultsPage() {
                     <div className='resultsPage__documentsList'>
                         <h2 className='resultsPage__documentsList-h2'>Список документов</h2>
                         <div className='resultsPage__documentsList-flex'>
-                            <div>PLACEHOLDER</div>
-                            <div>PLACEHOLDER</div>
-                        </div>
-                        <div className='resultsPage__center'>
-                            <button className='resultsPage__button'>Показать больше</button>
+                            <Documents />
                         </div>
                     </div>
                 </div>

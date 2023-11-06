@@ -1,11 +1,9 @@
 import './ResultsPage.css'
 import { AuthContext } from '../../hooks/AuthContext';
 import { RequestContext } from '../../hooks/SearchContext';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import React, { useContext } from "react";
 import { useEffect, useState } from 'react';
+
 
 export default function Histogram() {
     const { requestData } = useContext(RequestContext);
@@ -13,34 +11,8 @@ export default function Histogram() {
     const [loading, setLoading] = useState(true);
     const [totalDocuments, setTotalDocuments] = useState(0);
     const [dataHist, setDataHist] = useState([]);
-    const mock = [
-        {
-            data: [
-                {
-                    date: "2020-11-01T03:00:00+03:00",
-                    value: 8
-                },
-                {
-                    date: "2020-06-01T03:00:00+03:00",
-                    value: 6
-                }
-            ],
-            histogramType: "totalDocuments"
-        },
-        {
-            data: [
-                {
-                    date: "2020-11-01T03:00:00+03:00",
-                    value: 0
-                },
-                {
-                    date: "2020-06-01T03:00:00+03:00",
-                    value: 1
-                }
-            ],
-            histogramType: "riskFactors"
-        }
-    ];
+
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -121,8 +93,6 @@ export default function Histogram() {
 
             } catch (error) {
                 console.error(error);
-                setDataHist(mock)
-                console.log(dataHist)
             }
         };
 
@@ -130,54 +100,61 @@ export default function Histogram() {
     }, []);
 
     return (
-
-
-
         <div className='resultsPage__histogram'>
-            {dataHist.map(item => {
-                if (item.histogramType === "totalDocuments") {
-                    return (
-                        <div key={item.histogramType}>
-                            <h3>{item.histogramType}</h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        {item.data.map(dataItem => (
-                                            <td key={dataItem.date}>
-                                                <p>{dataItem.date}</p>
-                                            </td>
-                                        ))}
-                                    </tr>
-                                    <tr>
-                                        {item.data.map(dataItem => (
-                                            <td key={dataItem.date}>
-                                                <p>{dataItem.value}</p>
-                                            </td>
-                                        ))}
-                                    </tr>
-                                    {dataHist.map(item => {
-                                        if (item.histogramType === "riskFactors") {
-                                            return (
-                                                <tr key={item.histogramType}>
-                                                    {item.data.map(dataItem => (
-                                                        <td key={dataItem.date}>
-                                                            <p>{dataItem.value}</p>
-                                                        </td>
-                                                    ))}
-                                                </tr>
-                                            );
-                                        }
-                                        return null;
-                                    })}
-                                </tbody>
-                            </table>
-                        </div>
-                    );
-                }
-                return null;
-            })}
+            <p className='resultsPage__histogram-txt'>Найдено {totalDocuments} вариантов</p>
+            {loading ? (
+                <div className="histogram-loader">
+                    <span className="">Загружаем данные</span>
+                    <span className="loader"></span>
+                </div>
+            ) : (
+                <>
+                    {dataHist.map(item => {
+                        if (item.histogramType === "totalDocuments") {
+                            return (
+                                <div className='histogramTable' key={item.histogramType}>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td className='histogramTD green'>Период</td>
+                                                {item.data.map(dataItem => (
+                                                    <td className='histogramTD' key={dataItem.date}>
+                                                        <p>{new Date(dataItem.date).toLocaleDateString('ru-RU')}</p>
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                            <tr>
+                                                <td className='histogramTD green'>Всего</td>
+                                                {item.data.map(dataItem => (
+                                                    <td className='histogramTD histogramTD-border' key={dataItem.date}>
+                                                        <p>{dataItem.value}</p>
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                            {dataHist.map(item => {
+                                                if (item.histogramType === "riskFactors") {
+                                                    return (
+                                                        <tr key={item.histogramType}>
+                                                            <td className='histogramTD green'>Риски</td>
+                                                            {item.data.map(dataItem => (
+                                                                <td className='histogramTD' key={dataItem.date}>
+                                                                    <p>{dataItem.value}</p>
+                                                                </td>
+                                                            ))}
+                                                        </tr>
+                                                    );
+                                                }
+                                                return null;
+                                            })}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            );
+                        }
+                        return null;
+                    })}
+                </>
+            )}
         </div>
-
-
     );
 };

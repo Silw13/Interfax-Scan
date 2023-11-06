@@ -119,7 +119,7 @@ export default function SearchPage() {
 
         });
         navigate("/results");
-        console.log(requestData);
+
     };
 
     return (

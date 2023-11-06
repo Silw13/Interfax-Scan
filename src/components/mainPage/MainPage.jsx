@@ -4,9 +4,21 @@ import TariffsBlock from './TariffsBlock'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../hooks/AuthContext';
 import React, { useContext } from "react";
+import { useEffect, useState } from 'react';
 
 export default function MainPage() {
-    const { isAuthenticated } = useContext(AuthContext);
+    const { isAuthenticated,setIsAuthenticated, setAccessToken } = useContext(AuthContext);
+   
+
+    useEffect(() => {
+        const accessToken = localStorage.getItem("accessToken");
+        const isAuthenticated = localStorage.getItem("isAuthenticated");
+    
+        if (accessToken && isAuthenticated) {
+          setAccessToken(accessToken);
+          setIsAuthenticated(isAuthenticated);
+        }
+      }, []);
 
     return (
         <div className="mainPage">

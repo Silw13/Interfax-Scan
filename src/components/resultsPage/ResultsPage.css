@@ -62,6 +62,157 @@
 
 .resultsPage__documentsList-flex {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 38px;
+}
+
+.histogramTable {
+    border: #029491 solid 2px;
+    border-radius: 10px;
+    margin-bottom: 107px;
+    position: relative;
+    overflow-x: auto;
+}
+
+.green {
+    background-color: #029491;
+    color: white;
+}
+
+.histogram-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.histogram-loader span {
+    padding: 15px;
+}
+
+.histogram-loader span:last-child {
+    margin-bottom: 100px;
+}
+
+.histogramTD {
+    padding: 17px 27px 16px 27px;
+}
+
+.histogramTD-border {
+    border-right: 2px solid #949494;
+}
+
+td p {
+    text-align: center;
+}
+
+.resultsPage__documents {
+    display: flex;
     justify-content: space-between;
     margin-bottom: 38px;
+    margin-top: 58px;
+    flex-wrap: wrap;
+}
+
+.resultsPage__document {
+    width: 641px;
+    height: 694px;
+    box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 20px;
+}
+
+.resultsPage__document-wrapper {
+    padding: 19px 30px 35px 30px;
+    height: 640px;
+}
+
+.resultsPage__document-header-info-txt {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+
+    margin-right: 14px;
+    color: #949494;
+}
+
+.resultsPage__document-header-info {
+    margin-bottom: 24px;
+}
+
+.resultsPage__document-header-main-h3 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 14px;
+}
+
+.resultsPage__document-header-main-tag {
+    background-color: #FFB64F;
+    padding: 4px 11px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+
+.resultsPage__document-header-main-tags {
+    margin-bottom: 14px;
+}
+
+.resultsPage__document-content-img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.resultsPage__document-content-txt {
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 19px;
+    opacity: 0.5;
+}
+
+.resultsPage__document-content {
+    margin-bottom: 32px;
+}
+
+.resultsPage__document-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultsPage__document-footer-button {
+    width: 223px;
+    padding: 14px 0;
+    border: 0;
+    border-radius: 5px;
+    color: black;
+    background-color: #7CE3E1;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.resultsPage__document-footer-cntr {
+    font-family: Inter;
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.resultsPage__document-content-txt {
+    display: -webkit-box;
+    -webkit-line-clamp: 11; /* Указываете желаемое количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* Задайте нужную высоту элемента */
+    
 }

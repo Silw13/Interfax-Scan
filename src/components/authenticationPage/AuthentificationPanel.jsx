@@ -48,6 +48,8 @@ export default function AuthentificationPanel() {
             const { accessToken } = data;
             setAccessToken(accessToken);
             setIsAuthenticated(true);
+            localStorage.setItem('accessToken', accessToken);
+            localStorage.setItem('isAuthenticated', true);
             navigate("/search");
 
         } else {
