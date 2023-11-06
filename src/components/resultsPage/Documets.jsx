@@ -14,8 +14,6 @@ export default function Documents() {
     const regex = /<[^>]*>/g;
     const regex2 = /&[^;]+;/g;
 
-
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -136,16 +134,16 @@ export default function Documents() {
                     const data = await response.json();
                     combinedData.push(...data);
                 }
-
+    
                 setDocumentsList(combinedData);
                 setLoading(false);
             } catch (error) {
                 console.error(error);
             }
         };
-
+    
         fetchDocuments();
-    }, []);
+    }, [visibleDocuments]);
 
 
 
