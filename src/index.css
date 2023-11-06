@@ -176,3 +176,9 @@ button {
 .link {
     text-decoration: none;
 }
+
+@media (max-width: 1350px) {
+    .container {
+        max-width: 335px;
+    }
+}

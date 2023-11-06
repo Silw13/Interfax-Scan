@@ -246,3 +246,35 @@
 .tariffs-header_black img {
     margin: -10px 0px 0 20px;
 }
+
+@media (max-width: 1350px) {
+    .mainPage__mainPicture {
+        flex-wrap: wrap;
+    }
+
+    .heading_h1 {
+        font-size: 28px;
+        line-height: 33px;
+    }
+
+    .mainPage__mainPicture-img img {
+        width: 347px;
+    }
+
+    .heading_mainPage-h2 {
+        font-size: 28px;
+    }
+
+    .mainPage__secondaryPicture {
+        width: 347px;
+    }
+
+    .tariffs-block {
+        flex-wrap: wrap;
+    }
+
+    .tariffs-blockItem {
+        margin-right: 0px;
+    }
+    
+}

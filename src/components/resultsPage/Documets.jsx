@@ -111,7 +111,7 @@ export default function Documents() {
         }
     }, [documentsId]);
 
-    
+
 
     useEffect(() => {
         const fetchDocuments = async () => {
@@ -148,48 +148,43 @@ export default function Documents() {
     }, []);
 
 
+
     return (
         <>
             <div className='resultsPage__documents'>
-                {loading ? (
-                    <div className="">
-                        <span className="">Загружаем данные</span>
-                        <span className="loader"></span>
-                    </div>
-                ) : (
-                    documentsList.map(item => (
-                        <div className='resultsPage__document' key={item.id}>
-                            <div className='resultsPage__document-wrapper'>
-                                <div className='resultsPage__document-header'>
-                                    <div className='resultsPage__document-header-info'>
-                                        <span className='resultsPage__document-header-info-txt'>{new Date(item.ok.issueDate).toLocaleDateString('ru-RU')}</span>
-                                        <span className='resultsPage__document-header-info-txt'><a className='resultsPage__document-header-info-txt' href={item.ok.url}>{item.ok.source.name}</a></span>
-                                    </div>
-                                    <div className='resultsPage__document-header-main'>
-                                        <h3 className='resultsPage__document-header-main-h3'>{item.ok.title.text}</h3>
-                                        <div className='resultsPage__document-header-main-tags'>
-                                            {item.ok.attributes.isTechNews ? <div className='resultsPage__document-header-main-tag'>Технические новости</div> : ''}
-                                            {item.ok.attributes.isAnnouncement ? <div className='resultsPage__document-header-main-tag'>Анонсы и события</div> : ''}
-                                            {item.ok.attributes.isDigest ? <div className='resultsPage__document-header-main-tag'>Сводки новостей</div> : ''}
-                                        </div>
-                                    </div>
+                {documentsList.map(item => (
+                    <div className='resultsPage__document' key={item.id}>
+                        <div className='resultsPage__document-wrapper'>
+                            <div className='resultsPage__document-header'>
+                                <div className='resultsPage__document-header-info'>
+                                    <span className='resultsPage__document-header-info-txt'>{new Date(item.ok.issueDate).toLocaleDateString('ru-RU')}</span>
+                                    <span className='resultsPage__document-header-info-txt'><a className='resultsPage__document-header-info-txt' href={item.ok.url}>{item.ok.source.name}</a></span>
                                 </div>
-                                <div className='resultsPage__document-content'>
-                                    <img className='resultsPage__document-content-img' src="https://placehold.co/581x158" alt="" />
-                                    <p className='resultsPage__document-content-txt'>{item.ok.content.markup.replace(regex, '').replace(regex2, '')}</p>
-                                </div>
-                                <div className='resultsPage__document-footer'>
-                                    <a href={item.ok.url}><button className='resultsPage__document-footer-button'>Читать в источнике</button></a>
-                                    <div className='resultsPage__document-footer-cntr'><span>{item.ok.content.markup.replace(regex, '').replace(regex2, '').trim().split(/\s+/).length} слова</span></div>
+                                <div className='resultsPage__document-header-main'>
+                                    <h3 className='resultsPage__document-header-main-h3'>{item.ok.title.text}</h3>
+                                    <div className='resultsPage__document-header-main-tags'>
+                                        {item.ok.attributes.isTechNews ? <div className='resultsPage__document-header-main-tag'>Технические новости</div> : ''}
+                                        {item.ok.attributes.isAnnouncement ? <div className='resultsPage__document-header-main-tag'>Анонсы и события</div> : ''}
+                                        {item.ok.attributes.isDigest ? <div className='resultsPage__document-header-main-tag'>Сводки новостей</div> : ''}
+                                    </div>
                                 </div>
                             </div>
+                            <div className='resultsPage__document-content'>
+                                <img className='resultsPage__document-content-img' src="https://placehold.co/581x158" alt="" />
+                                <p className='resultsPage__document-content-txt'>{item.ok.content.markup.replace(regex, '').replace(regex2, '')}</p>
+                            </div>
+                            <div className='resultsPage__document-footer'>
+                                <a href={item.ok.url}><button className='resultsPage__document-footer-button'>Читать в источнике</button></a>
+                                <div className='resultsPage__document-footer-cntr'><span>{item.ok.content.markup.replace(regex, '').replace(regex2, '').trim().split(/\s+/).length} слова</span></div>
+                            </div>
                         </div>
-                    ))
-                )}
+                    </div>
+                ))}
             </div>
             <div className='resultsPage__center'>
                 <button className='resultsPage__button' onClick={handleShowMore}>Показать больше</button>
             </div>
         </>
     )
+
 }

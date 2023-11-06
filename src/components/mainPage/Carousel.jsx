@@ -34,6 +34,16 @@ export default function SimpleSlider() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1350,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                },
+            }
+        ],
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />
 
