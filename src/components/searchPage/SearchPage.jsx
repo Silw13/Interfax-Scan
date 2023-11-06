@@ -171,15 +171,15 @@ export default function SearchPage() {
                                         </label><br />
                                         <label className='checkbox-other'>
                                             <input className='searchPage__checkbox' type="checkbox" checked={checkbox5Checked} onChange={() => setCheckbox5Checked(!checkbox5Checked)} />
-                                            <span>Включать технические новости рынков</span>
+                                            <span>Исключать технические новости рынков</span>
                                         </label><br />
                                         <label className='checkbox-other'>
                                             <input className='searchPage__checkbox' type="checkbox" checked={checkbox6Checked} onChange={() => setCheckbox6Checked(!checkbox6Checked)} />
-                                            <span>Включать анонсы и календари</span>
+                                            <span>Исключать анонсы и календари</span>
                                         </label><br />
                                         <label className='checkbox-other'>
                                             <input className='searchPage__checkbox' type="checkbox" checked={checkbox7Checked} onChange={() => setCheckbox7Checked(!checkbox7Checked)} />
-                                            <span>Включать сводки новостей</span>
+                                            <span>Исключать сводки новостей</span>
                                         </label><br />
                                     </div>
                                     <div className='searchPage__searchPanel'>

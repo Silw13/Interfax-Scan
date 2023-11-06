@@ -37,7 +37,7 @@ export default function LimitCounter() {
             <div className="header__limitCounter-wrapper">
                 {loading ? (
                     <div className="header__limitCounter-loader">
-                        <span class="loader"></span>
+                        <span className="loader"></span>
                     </div>
                 ) : (<>
                     <div className="header__limitCounter-textBlock">
