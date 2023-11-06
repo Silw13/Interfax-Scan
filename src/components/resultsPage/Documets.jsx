@@ -95,20 +95,23 @@ export default function Documents() {
     }, []);
 
     const handleShowMore = () => {
-        if (documentsId.items.length - visibleDocuments > 10) {
-            setvisibleDocuments(visibleDocuments + 10);
-        } else {
-            setvisibleDocuments(documentsId.items.length - visibleDocuments);
+        if (visibleDocuments < documentsId.items.length) {
+            if (documentsId.items.length - visibleDocuments > 10) {
+                setvisibleDocuments(visibleDocuments + 10);
+            } else {
+                setvisibleDocuments(documentsId.items.length);
+            }
         }
         console.log(visibleDocuments);
     };
 
     useEffect(() => {
         if (documentsId.items) {
-            documentsId.items.length < 10 ? setvisibleDocuments(documentsId.items.length) : setvisibleDocuments(10);
+            documentsId.items.length < 10
+                ? setvisibleDocuments(documentsId.items.length)
+                : setvisibleDocuments(10);
         }
     }, [documentsId]);
-
 
 
     useEffect(() => {
@@ -134,14 +137,14 @@ export default function Documents() {
                     const data = await response.json();
                     combinedData.push(...data);
                 }
-    
+
                 setDocumentsList(combinedData);
                 setLoading(false);
             } catch (error) {
                 console.error(error);
             }
         };
-    
+
         fetchDocuments();
     }, [visibleDocuments]);
 
@@ -180,7 +183,12 @@ export default function Documents() {
                 ))}
             </div>
             <div className='resultsPage__center'>
-                <button className='resultsPage__button' onClick={handleShowMore}>Показать больше</button>
+
+                {visibleDocuments < documentsId.items.length && (
+                    <button className='resultsPage__button' onClick={handleShowMore}>
+                        Показать больше
+                    </button>
+                )}
             </div>
         </>
     )
