@@ -239,3 +239,59 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.mob {display: none;}
+
+@media (max-width: 1350px) { 
+    .searchPage__content-main-panel-col:last-child{
+        display: none;
+    }
+
+    .searchPage__content-main-panel {
+        width: 335px;
+        height: 650px;
+    }
+
+    .searchPage__content-main-panel-row {
+        flex-direction: column;
+    }
+
+    .searchPage__content-main-heading {
+        font-size: 28px;
+        line-height: 33px;
+    }
+    
+    .searchPage__content-main-panel-row .searchPage__select {
+        width: 242px;
+    }
+     
+    .mob {
+        display: block;
+        width: 242px;
+    }
+
+    .searchPage__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .searchPage__content-img {
+        width: 335px;
+    }
+
+    .searchPage__content-img {
+        margin: 0;
+    }
+
+    .searchPage__content-img img {
+        width: 335px;
+    }
+
+    .searchPage__content-img-folders {
+        display: none;
+    }
+
+    .searchPage__content-img-list {
+        display: none;
+    }
+}

@@ -159,4 +159,46 @@
 
 .error {
     border-color: #FF5959;
-  }
+}
+
+.img-mob {
+    display: none;
+}
+
+@media (max-width: 1350px) {
+    .authentificationPage__heading {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .authentificationPage__img img {
+        display: none;
+    }
+
+    .img-mob {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .authentificationPage__content {
+        flex-direction: column;
+    }
+
+    .authentificationPanel {
+        margin-bottom: 10px;
+        width: 335px;
+    }
+    
+    .authentificationPage__img {
+        margin-bottom: 120px;
+    }
+
+    .authentificationPanel__header .lock {
+        position: absolute;
+        margin: -94px 0px 0px 3px;
+    }
+
+    .authentificationPage__content {
+        margin-top: 0px;
+    }
+}

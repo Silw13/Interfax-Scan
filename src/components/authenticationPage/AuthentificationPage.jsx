@@ -12,8 +12,9 @@ export default function AuthentificationPage() {
                         <img src="/assets/authenticationPage_Characters.png" alt="" />
                     </div>
                     <AuthentificationPanel />
-
+                    <img className='img-mob'src="/assets/authenticationPage_Characters.png" alt="" />
                 </div>
+                
             </div>
         </div>
     )

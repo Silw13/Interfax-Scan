@@ -150,6 +150,7 @@ export default function SearchPage() {
                                         <input className={`searchPage__select ${errorDate && 'error'}`} type="date" id="datePicker" placeholder="Дата конца" value={input4} onChange={handleInputChange4} />
                                         {errorDate && <p className='searchPage__errorDate'>{errorDate}</p>}
                                     </div>
+                                    <button className='searchPage__button mob' disabled={isButtonDisabled} onClick={handleClick}>Поиск</button>
                                 </div>
                                 <div className='searchPage__content-main-panel-col'>
                                     <div className='searchPage__content-main-panel-chekboxes'>
