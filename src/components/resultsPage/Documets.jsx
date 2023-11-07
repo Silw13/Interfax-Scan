@@ -95,14 +95,13 @@ export default function Documents() {
     }, []);
 
     const handleShowMore = () => {
-        if (visibleDocuments < documentsId.items.length) {
+        if (documentsId.items && visibleDocuments < documentsId.items.length) {
             if (documentsId.items.length - visibleDocuments > 10) {
                 setvisibleDocuments(visibleDocuments + 10);
             } else {
                 setvisibleDocuments(documentsId.items.length);
             }
         }
-        console.log(visibleDocuments);
     };
 
     useEffect(() => {
@@ -115,6 +114,7 @@ export default function Documents() {
 
 
     useEffect(() => {
+
         const fetchDocuments = async () => {
             try {
                 const combinedData = [];
@@ -146,8 +146,8 @@ export default function Documents() {
         };
 
         fetchDocuments();
-    }, [visibleDocuments]);
 
+    }, [documentsId, visibleDocuments, accessToken]);
 
 
     return (
@@ -183,8 +183,7 @@ export default function Documents() {
                 ))}
             </div>
             <div className='resultsPage__center'>
-
-                {visibleDocuments < documentsId.items.length && (
+                {documentsId.items && visibleDocuments < documentsId.items.length && (
                     <button className='resultsPage__button' onClick={handleShowMore}>
                         Показать больше
                     </button>

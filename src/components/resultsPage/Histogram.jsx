@@ -82,6 +82,8 @@ export default function Histogram() {
                     })
                 });
                 const data = await response.json();
+                console.log(data)
+                
 
                 let totalDocumentsCount = 0;
                 const totalDocumentsData = data.data.find(item => item.histogramType === 'totalDocuments');

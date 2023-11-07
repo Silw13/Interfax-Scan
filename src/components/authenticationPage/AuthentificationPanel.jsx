@@ -51,7 +51,6 @@ export default function AuthentificationPanel() {
             localStorage.setItem('accessToken', accessToken);
             localStorage.setItem('isAuthenticated', true);
             navigate("/search");
-
         } else {
             setError('Неправильный логин или пароль');
             console.log(data.error);
