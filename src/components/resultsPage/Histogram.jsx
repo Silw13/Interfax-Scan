@@ -82,7 +82,7 @@ export default function Histogram() {
                     })
                 });
                 const data = await response.json();
-                console.log(data)
+                console.log(data.data)
                 
 
                 let totalDocumentsCount = 0;
